@@ -1,0 +1,140 @@
+$secondary-button-color: transparent !important;
+$primary-button-color: #36655A;
+$background-light-green: rgb(167, 192, 167);
+$green-border-color: #5A9D73;
+$user-profile-green-color: #AAEDC3;
+$background-color: #F9F7F2;
+$background-light-green: #DCF3E5;
+$background-main: #F9F7F2;
+$font-family-main: 'Arial', sans-serif;
+
+body {
+    font-family: $font-family-main;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin riseFromBelowAnimation($duration: 0.5s, $ease: ease-out) {
+    @keyframes riseFromBelow {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    animation: riseFromBelow $duration $ease forwards;
+}
+
+@mixin button {
+    border: 1px solid black;
+    border-radius: 0;
+    padding: 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    height: 56px;
+    width: 100%;
+}
+
+@mixin button-transparent {
+    display: flex;
+    height: 46px;
+    // padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 0.5px solid #000;
+    color: var(--Black, #17140D);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    height: 46px;
+    padding: 0.5rem;
+    // min-width: 100px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken(white, 5%);
+    }
+}
+
+@mixin button-primary {
+    position: relative;
+    height: 46px;
+    display: flex;
+    // padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: 0.5px solid #000;
+    background: var(--Green-main, #36655A);
+    color: var(--White, #FFF);
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    align-items: flex-start;
+    width: fit-content;
+
+    &:hover {
+        cursor: pointer;
+        color: white;
+        background-color: darken(#36655A, 5%);
+    }
+}
+
+@mixin back-button {
+    color: black;
+    font-family: Poppins;
+    display: flex;
+    position: relative;
+    border: none;
+    width: auto;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+
+    &:hover {
+        color: rgb(175, 169, 169);
+    }
+
+}
+
+@mixin main-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242424;
+}
+
+@mixin secondary-title {
+    color: var(--Black, #17140D);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+}
+
+@mixin regular-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #17140D;
+}

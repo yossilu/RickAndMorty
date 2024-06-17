@@ -1,0 +1,87 @@
+.rick-and-morty-gallery {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    margin-bottom: 20px 0;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    background-color: white;
+  }
+
+  .search {
+    position: relative;
+    border-radius: 4px;
+    background-color: white;
+    margin-left: 0;
+    width: 150px;
+    color: black;
+    padding: 0;
+
+    &:hover {
+      background-color: white;
+    }
+
+    .MuiAutocomplete-root {
+      width: 100%;
+    }
+
+    .searchIcon {
+      padding: 0 16px;
+      height: 100%;
+      position: absolute;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .inputRoot {
+      color: inherit;
+    }
+
+    .inputInput {
+      padding: 8px 8px 8px 0;
+      padding-left: calc(1em + 32px);
+      transition: width 300ms;
+      width: 100%;
+
+      @media (min-width: 600px) {
+        width: 20ch;
+      }
+    }
+  }
+
+  .filter {
+    margin-left: 16px;
+    width: 150px;
+  }
+
+  .gallery {
+    padding: 20px;
+  }
+
+  .hoverable-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .modal-content {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .MuiTypography-body1 {
+      margin-bottom: 10px;
+    }
+  }
+}

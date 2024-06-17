@@ -1,24 +1,19 @@
 # Rick and Morty Explorer
 ## Welcome to the Rick and Morty Explorer app! This project allows you to explore characters and locations from the Rick and Morty universe. The app features full JWT authentication with two types of users: ADMIN and USER, each with different permissions and functionalities.
 
-Getting Started
-Prerequisites
-Node.js
-npm (Node Package Manager)
-MongoDB
-Backend Setup
+Getting Started:
+Prerequisites: 
+- Node.js
+- npm (Node Package Manager)
+- MongoDB
+  
+#### Backend Setup
+
 Navigate to the backend folder:
+- cd backend
+- npm install
 
-sh
-Copy code
-cd backend
-Install the necessary dependencies:
-
-sh
-Copy code
-npm install
 Set up your environment variables:
-
 Create a .env file in the backend folder and add the following:
 
 env
@@ -29,7 +24,7 @@ env
 Start the backend server:
 - node server
   
-Frontend Setup
+#### Frontend Setup
 - cd frontend
 - npm install
 

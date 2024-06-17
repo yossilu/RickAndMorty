@@ -22,54 +22,43 @@ Set up your environment variables:
 Create a .env file in the backend folder and add the following:
 
 env
-Copy code
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+- PORT=5000
+- MONGO_URI=your_mongodb_connection_string
+- JWT_SECRET=your_jwt_secret
+  
 Start the backend server:
-
-sh
-Copy code
-npm start
+- node server
+  
 Frontend Setup
-Navigate to the frontend folder:
+- cd frontend
+- npm install
 
-sh
-Copy code
-cd frontend
-Install the necessary dependencies:
-
-sh
-Copy code
-npm install
 Start the frontend server:
-
-sh
-Copy code
 npm run dev
-What Does the App Do?
-The Rick and Morty Explorer app is designed to allow users to explore characters and locations from the Rick and Morty universe. Here’s a rundown of its main features:
 
-Main APIs
-Characters API:
+### What Does the App Do?
+### The Rick and Morty Explorer app is designed to allow users to explore characters and locations from the Rick and Morty universe. Here’s a rundown of its main features:
 
+## Main APIs
+### Characters API:
 Fetches and displays characters from the Rick and Morty API.
 Allows users to search, filter, and paginate through the list of characters.
-Locations API:
 
+### Locations API:
 Fetches and displays locations from the Rick and Morty API.
 This feature is only accessible to ADMIN users to demonstrate the authentication middleware in action.
-User Types
+
+### User Types
 The app has two types of users: ADMIN and USER. Depending on the user type, different functionalities and UI elements are available:
 
-ADMIN Users:
+#### ADMIN Users:
 
 - Can access the "Locations" button.
 - Have additional filters for searching characters.
 - Can open character cards to view more detailed information.
 - Have access to specific dashboards/pages guarded by frontend routing.
   
-USER Users:
+#### USER Users:
 
 - Can view and search characters.
 - Do not have access to the "Locations" button or the additional filters available to ADMIN users.

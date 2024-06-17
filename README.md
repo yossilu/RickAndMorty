@@ -56,7 +56,7 @@ The app has two types of users: ADMIN and USER. Depending on the user type, diff
 #### USER Users:
 
 - Can view and search characters.
-- Do not have access to the "Locations" button or the additional filters available to ADMIN users.
+- Do not have access to the "Locations" button which is there for USER role on purpose or the additional filters available to ADMIN users.
   
 ## Authentication
 The app implements full JWT authentication with MongoDB as the NoSQL database. Users can sign up as either an ADMIN or a USER. The authentication system ensures secure access to the different parts of the app based on user roles.

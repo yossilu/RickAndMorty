@@ -62,9 +62,11 @@ The app has two types of users: ADMIN and USER. Depending on the user type, diff
 The app implements full JWT authentication with MongoDB as the NoSQL database. Users can sign up as either an ADMIN or a USER. The authentication system ensures secure access to the different parts of the app based on user roles.
 
 ## Frontend Guarding and Context
-Frontend Guarding: Using React Router v6, certain routes and components are protected based on the user's role. This ensures that only authorized users can access certain parts of the app.
+#### Frontend Guarding: 
+Using React Router v6, certain routes and components are protected based on the user's role. This ensures that only authorized users can access certain parts of the app.
 
-React Context: A context hook is implemented as a secondary option for state management. While it's less practical than useQuery due to caching, it provides an alternative approach for managing global state in the app.
+#### React Context: 
+A context hook is implemented as a secondary option for state management. While it's less practical than useQuery due to caching, it provides an alternative approach for managing global state in the app.
 
 ## How to Use the App
 Sign Up: Register as either an ADMIN or a USER.
@@ -74,6 +76,7 @@ Admin Features: If logged in as an ADMIN, click the "Locations" button to explor
 View Details: Click on a character card (as an ADMIN) to view more detailed information in a modal.
 
 ## Additional Notes
-The app uses useQuery for data fetching, which provides efficient caching and state management.
-Authentication is handled using JWT, ensuring secure and scalable user management.
-MongoDB is used as the NoSQL database for storing user data.
+- The search bar holds 2 different types of filters, Name which gets his autocomplete from the results, and the rest of the filters which got their options beforhand.
+- The app uses useQuery for data fetching, which provides efficient caching and state management.
+- Authentication is handled using JWT, ensuring secure and scalable user management.
+- MongoDB is used as the NoSQL database for storing user data.
